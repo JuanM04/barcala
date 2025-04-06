@@ -93,7 +93,7 @@
       // Footer en todas las páginas
       set text(size: 10pt)
       set align(center)
-      counter(page).display()
+      counter(page).display("1 / 1", both: true)
     },
   )
 

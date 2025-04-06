@@ -41,8 +41,6 @@
 
 #let formato-schema = z.dictionary((
   tipografia: z.string(default: "New Computer Modern"),
-  columnas: z.integer(min: 1, default: 1),
-  numeracion: z.string(default: "1"),
   margenes: z.choice(("simétricos", "anillado"), default: "simétricos"),
 ))
 
