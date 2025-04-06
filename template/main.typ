@@ -1,6 +1,6 @@
-#import "../src/lib.typ": proyecto, nomenclatura, apendice
+#import "../src/lib.typ": informe, nomenclatura, apendice
 
-#show: proyecto.with(
+#show: informe.with(
   unidad-academica: "ingeniería",
   asignatura: "F0317 Física II",
   titulo: "Informe de Laboratorio Nº 2",

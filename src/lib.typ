@@ -1,4 +1,4 @@
-#let proyecto(
+#let informe(
   institucion: none,
   unidad-academica: none,
   asignatura: none,
