@@ -1,7 +1,7 @@
 #import "../src/lib.typ": proyecto, nomenclatura, apendice
 
 #show: proyecto.with(
-  unidad-academica: "ingenieria",
+  unidad-academica: "ingeniería",
   asignatura: "F0317 Física II",
   titulo: "Informe de Laboratorio Nº 2",
   equipo: "Grupo 3",

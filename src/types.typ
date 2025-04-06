@@ -49,7 +49,8 @@
 #let parse-options(options) = z.parse(
   options,
   z.dictionary((
-    unidad-academica: z.choice(("informática", "ingenieria")),
+    institucion: z.string(default: "unlp"),
+    unidad-academica: z.string(),
     asignatura: z.content(),
     titulo: z.content(),
     equipo: z.content(optional: true),

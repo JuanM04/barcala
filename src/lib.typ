@@ -1,4 +1,5 @@
 #let proyecto(
+  institucion: none,
   unidad-academica: none,
   asignatura: none,
   titulo: none,
@@ -13,6 +14,7 @@
   // Validación de los parámetros de entrada
   import "types.typ": parse-options
   let opts = parse-options((
+    institucion: institucion,
     unidad-academica: unidad-academica,
     asignatura: asignatura,
     titulo: titulo,
@@ -123,6 +125,16 @@
   // Otros
   set bibliography(style: "institute-of-electrical-and-electronics-engineers")
 
+  // Logos
+  let institucion-logo = if opts.institucion == "unlp" { "images/unlp.svg" } else { opts.institucion }
+  let unidad-academica-logo = if opts.unidad-academica == "informática" {
+    "images/informática.png"
+  } else if opts.unidad-academica == "ingeniería" {
+    "images/ingeniería.png"
+  } else {
+    opts.unidad-academica
+  }
+
   // Carátula
   align(center)[
     #set par(spacing: 0pt)
@@ -130,8 +142,8 @@
     #stack(
       dir: ltr,
       spacing: 1fr,
-      image("images/" + opts.unidad-academica + ".png", height: 2cm),
-      image("images/unlp.svg", height: 2cm),
+      image(unidad-academica-logo, height: 2cm),
+      image(institucion-logo, height: 2cm),
     )
     #v(1em)
     #text(size: 14pt, smallcaps(opts.asignatura))
