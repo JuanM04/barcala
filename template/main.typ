@@ -1,4 +1,4 @@
-#import "lib.typ": proyecto, nomenclatura, apendice
+#import "../src/lib.typ": proyecto, nomenclatura, apendice
 
 #show: proyecto.with(
   unidad-academica: "ingenieria",
