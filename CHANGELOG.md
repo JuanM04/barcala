@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.1] - 2025-04-10
+
 ### Changed
 
 - Template con `fancy-units`, `lilaq` y `physica`.
@@ -24,5 +26,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Primera versión del template de Typst.
 - Documentación general.
 
-[unreleased]: https://github.com/JuanM04/barcala/compare/v0.1.0...HEAD
-[0.0.1]: https://github.com/JuanM04/barcala/releases/tag/v0.1.0
+[unreleased]: https://github.com/JuanM04/barcala/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/JuanM04/barcala/compare/v0.1.0...v0.1.1
+[0.1.0]: https://github.com/JuanM04/barcala/releases/tag/v0.1.0
