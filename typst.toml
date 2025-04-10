@@ -10,7 +10,7 @@ entrypoint = "src/lib.typ"
 categories = ["report"]
 disciplines = ["computer-science", "education", "engineering"]
 keywords = ["report", "project", "informe", "proyecto", "ingenieria", "unlp"]
-exclude = [".vscode", "template/main.pdf"]
+exclude = [".vscode", "template/main.pdf", "CHANGELOG.md"]
 
 [template]
 path = "template"
