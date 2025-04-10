@@ -90,15 +90,20 @@ Para agregar una tabla de símbolos/nomenclatura al informe, se puede usar el co
 
 ## Desarrollo
 
-Para generar la imagen `thumbnail.png` de la portada, se debe cambiar
+Para generar el documento `main.pdf` y la imagen `thumbnail.png` de la portada, se debe cambiar
 
 ```diff
 -  #import "@preview/barcala:0.1.0": ...
 +  #import "../src/lib.typ": ...
 ```
 
-y utilizar el siguiente comando:
+y utilizar los siguientes comandos:
 
 ```bash
-typst compile --root . --format png --pages 1 template/main.typ thumbnail.png
+# Genera PDF
+typst compile --root . --pdf-standard a-2b template/main.typ
+# Genera thumbnail.png
+typst compile --root . --format png --pages 1,2 template/main.typ "thumbnail-{p}.png"
+magick montage "thumbnail-[1-2].png" -tile 2x1 -geometry +0+0 thumbnail.png
+rm thumbnail-1.png && rm thumbnail-2.png
 ```
