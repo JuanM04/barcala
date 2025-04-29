@@ -21,7 +21,7 @@ Plantilla de informe para estudiantes de la Universidad Nacional de La Plata, es
 )
 ```
 
-- `institución`: el logo de la institución del informe.
+- `institucion`: el logo de la institución del informe.
   - `"unlp"`: Universidad Nacional de La Plata (por defecto)
   - Si se desea usar un logo diferente, basta con escribir la ruta la logo
 - `unidad-academica`: el logo de la unidad académica del informe.
