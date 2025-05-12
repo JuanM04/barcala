@@ -73,18 +73,28 @@
       // Header en todas las páginas menos la primera
       if (counter(page).get().at(0) != 1) {
         set text(size: 10pt)
-        grid(
-          columns: (1fr, 1fr),
-          column-gutter: 2cm,
-          row-gutter: interlineado,
-          align: (left + top, right + top),
-          strong(opts.asignatura), [Año #opts.fecha.year()],
-          opts.titulo,
-          smallcaps(if opts.equipo != none {
-            opts.equipo
-          } else {
-            opts.autores.map(a => a.apellido).join(", ")
-          }),
+        stack(
+          dir: ltr,
+          stack(
+            dir: ttb,
+            spacing: interlineado,
+            strong(opts.asignatura),
+            opts.titulo,
+          ),
+          h(1fr),
+          {
+            set align(right)
+            stack(
+              dir: ttb,
+              spacing: interlineado,
+              [Año #opts.fecha.year()],
+              smallcaps(if opts.equipo != none {
+                opts.equipo
+              } else {
+                opts.autores.map(a => a.apellido).join(", ")
+              }),
+            )
+          },
         )
         line(length: 100%, stroke: 0.5pt)
       }
