@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- Un resumen igual a `none` ahora no genera un error.
+
 ## [0.1.2] - 2025-05-12
 
 ### Fixed

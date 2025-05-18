@@ -57,7 +57,7 @@
       pre-transform: z.coerce.array,
     ),
     titulo-descriptivo: z.string(),
-    resumen: z.content(),
+    resumen: z.content(optional: true),
     fecha: z.date(pre-transform: z.coerce.date),
     formato: formato-schema,
   )),
