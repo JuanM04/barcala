@@ -79,7 +79,11 @@
             dir: ttb,
             spacing: interlineado,
             strong(opts.asignatura),
-            opts.titulo,
+            if opts.titulo != none {
+              opts.titulo
+            } else {
+              opts.titulo-descriptivo
+            },
           ),
           h(1fr),
           {
@@ -157,8 +161,10 @@
     )
     #v(1em)
     #text(size: 14pt, smallcaps(opts.asignatura))
-    #v(1em)
-    #text(size: 12pt, opts.titulo)
+    #if opts.titulo != none {
+      v(1em)
+      text(size: 12pt, opts.titulo)
+    }
     #v(1.5em)
     #par(
       leading: 0.4em,

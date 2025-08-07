@@ -50,7 +50,7 @@
     institucion: z.string(default: "unlp"),
     unidad-academica: z.string(),
     asignatura: z.content(),
-    titulo: z.content(),
+    titulo: z.content(optional: true),
     equipo: z.content(optional: true),
     autores: z.array(
       autor-schema,

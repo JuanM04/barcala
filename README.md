@@ -34,7 +34,7 @@ Plantilla de informe para estudiantes de la Universidad Nacional de La Plata, es
   - Si se desea usar un logo diferente, basta con escribir la ruta la logo
   - Si la unidad académica de la UNLP no está en la lista, [creá un reporte](https://github.com/JuanM04/barcala/issues/new) con el link al logo y lo agregamos a la plantilla.
 - `asignatura`: el nombre de la asignatura (`str`).
-- `titulo` (`content`): el título más formal del informe, como `[Trabajo Práctico Nº 3]`.
+- `titulo` (`content`, opcional): el título más formal del informe, como `[Trabajo Práctico Nº 3]`.
 - `equipo` (`content`): el nombre del equipo, como `[Grupo 12]`.
 - `autores` (`array`): los autores y autoras del proyecto. Cada autor/a tiene
   - `nombre` (`str`): el nombre del autor/a con el formato `Apellido, Nombre`; 
