@@ -1,5 +1,5 @@
-#import "@preview/barcala:0.1.2": informe, nomenclatura, apendice
-#import "@preview/fancy-units:0.1.1": unit, fancy-units-configure // Paquete para unidades de medida, puede ser omitido
+#import "@preview/barcala:0.1.2": apendice, informe, nomenclatura
+#import "@preview/fancy-units:0.1.1": fancy-units-configure, unit // Paquete para unidades de medida, puede ser omitido
 #import "@preview/lilaq:0.2.0" as lq // Paquete para gráficos, puede ser omitido
 #import "@preview/physica:0.9.5": * // Paquete para matemática y física, puede ser omitido
 
@@ -51,7 +51,7 @@
 )
 
 = Introducción
-Coloque aquí la Introducción a su trabajo destacando el interés y los objetivos del mismo.
+Coloque aquí la introducción a su trabajo destacando el interés y los objetivos del mismo.
 
 = Marco teórico
 Si corresponde, describa aquí los fundamentos analíticos de su trabajo indicando las referencias consultadas para obtener la información en el formato adecuado. Por ejemplo, @griffiths_electrodynamics_2017, @jackson_classical_1999[p.~12], @maxwell_dynamical_1865.
@@ -68,7 +68,7 @@ Estas se pueden citar como @ley-de-ampere.
 Si corresponde, describa aquí la metodología empleada para desarrollar su trabajo. Recuerde mencionar y detallar dentro del texto principal todas las tablas y figuras incluidas en el documento.
 
 = Resultados
-Utilice esta sección para presentar y analizar sus resultados. Incluya preferetemente gráficos vectoriales para garantizar la calidad de las imágenes. Recuerde mencionar y explicar el contenido de todas las figuras en el cuerpo principal del trabajo.
+Utilice esta sección para presentar y analizar sus resultados. Incluya preferentemente gráficos vectoriales para garantizar la calidad de las imágenes. Recuerde mencionar y explicar el contenido de todas las figuras en el cuerpo principal del trabajo.
 
 #figure(
   lq.diagram(
