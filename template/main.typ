@@ -1,4 +1,4 @@
-#import "@preview/barcala:0.1.3": apendice, informe, nomenclatura
+#import "../src/lib.typ": apendice, informe, nomenclatura
 #import "@preview/lilaq:0.4.0" as lq // Paquete para gráficos, puede ser omitido
 #import "@preview/physica:0.9.5": * // Paquete para matemática y física, puede ser omitido
 #import "@preview/zero:0.5.0" // Paquete para números lindos y unidades de medida, puede ser omitido
