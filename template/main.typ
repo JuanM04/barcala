@@ -1,7 +1,7 @@
 #import "@preview/barcala:0.1.3": apendice, informe, nomenclatura
-#import "@preview/fancy-units:0.1.1": fancy-units-configure, unit // Paquete para unidades de medida, puede ser omitido
 #import "@preview/lilaq:0.4.0" as lq // Paquete para gráficos, puede ser omitido
 #import "@preview/physica:0.9.5": * // Paquete para matemática y física, puede ser omitido
+#import "@preview/zero:0.5.0" // Paquete para números lindos y unidades de medida, puede ser omitido
 
 #show: informe.with(
   unidad-academica: "ingeniería",
@@ -33,21 +33,32 @@
   fecha: "2025-03-01",
 )
 
-// Configuración de `fancy-units`
-#fancy-units-configure(
-  per-mode: "slash",
-  unit-separator: sym.comma,
+// Configuración de `zero`
+#import zero: num, zi
+#zero.set-num(
+  decimal-separator: ",",
+)
+#zero.set-group(
+  size: 3,
+  separator: ".",
+  threshold: (integer: 5, fractional: calc.inf),
+)
+#zero.set-unit(
+  fraction: "inline",
 )
 
 // Bloques de matemática con números para citar
 #set math.equation(numbering: "(1)")
 
+// Unidades
+#let Vm = zi.declare("V/m")
+
 #nomenclatura(
-  ($q$, [Carga [#unit[C]]]),
-  ($I$, [Corriente [#unit[A]]]),
-  ($U$, [Potencial eléctrico [#unit[V]]]),
-  ($va(E)$, [Campo eléctrico [#unit[V/m]]]),
-  ($va(B)$, [Campo magnético [#unit[T]]]),
+  ($q$, [Carga [#zi.coulomb()]]),
+  ($I$, [Corriente [#zi.ampere()]]),
+  ($U$, [Potencial eléctrico [#zi.volt()]]),
+  ($va(E)$, [Campo eléctrico [#Vm()]]),
+  ($va(B)$, [Campo magnético [#zi.tesla()]]),
 )
 
 = Introducción
@@ -62,7 +73,7 @@ $
   integral.cont_(partial S) va(B) dot dd(va(l)) = mu_0 integral.double_S va(J) dot dd(va(A)).
 $ <ley-de-ampere>
 
-Estas se pueden citar como @ley-de-ampere.
+Estas se pueden citar como @ley-de-ampere. Los números y unidades pueden ser escritos con `zero`. Un número se puede escribir como #num[12345.6789] y una unidad como #zi.volt() o #zi.newton(). Se pueden declar unidades personalizadas como #Vm() e incluso combinar con una magnitud como #zi.ohm[220].
 
 = Metodología
 Si corresponde, describa aquí la metodología empleada para desarrollar su trabajo. Recuerde mencionar y detallar dentro del texto principal todas las tablas y figuras incluidas en el documento.
