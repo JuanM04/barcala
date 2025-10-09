@@ -47,8 +47,8 @@
 #let parse-options(options) = z.parse(
   options,
   z.dictionary((
-    institucion: z.either(z.string(), z.bytes(), default: "unlp"),
-    unidad-academica: z.either(z.string(), z.bytes()),
+    institucion: z.either(z.string(), z.content(), default: "unlp"),
+    unidad-academica: z.either(z.string(), z.content()),
     asignatura: z.content(),
     titulo: z.content(optional: true),
     equipo: z.content(optional: true),

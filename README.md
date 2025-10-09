@@ -27,11 +27,11 @@ Plantilla de informe para estudiantes de la Universidad Nacional de La Plata, es
 
 - `institucion`: el logo de la institución del informe.
   - `"unlp"`: Universidad Nacional de La Plata (por defecto)
-  - Si se desea usar un logo diferente, basta con pasar su ruta como `str` o directamente `bytes` usando `read`.
+  - Si se desea usar un logo diferente, se puede pasar un `image("logo.png")` o cualquier otro contenido. Si el logo es muy grande, se puede cambiar su tamaño como `image("logo.png", height: 80%)`.
 - `unidad-academica`: el logo de la unidad académica del informe. Opciones:
   - `"informática"`: Facultad de Informática
   - `"ingeniería"`: Facultad de Ingeniería
-  - Si se desea usar un logo diferente, basta con pasar su ruta como `str` o directamente `bytes` usando `read`.
+  - Si se desea usar un logo diferente, se puede pasar un `image("logo.png")` o cualquier otro contenido. Si el logo es muy grande, se puede cambiar su tamaño como `image("logo.png", height: 80%)`.
   - Si la unidad académica de la UNLP no está en la lista, [creá un reporte](https://github.com/JuanM04/barcala/issues/new) con el link al logo y lo agregamos a la plantilla.
 - `asignatura`: el nombre de la asignatura (`str`).
 - `titulo` (`content`, opcional): el título más formal del informe, como `[Trabajo Práctico Nº 3]`.

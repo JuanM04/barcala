@@ -140,11 +140,15 @@
   set bibliography(style: "institute-of-electrical-and-electronics-engineers")
 
   // Logos
-  let institucion-logo = if opts.institucion == "unlp" { "images/unlp.svg" } else { opts.institucion }
+  let institucion-logo = if opts.institucion == "unlp" {
+    image("images/unlp.svg", height: 100%)
+  } else {
+    opts.institucion
+  }
   let unidad-academica-logo = if opts.unidad-academica == "informática" {
-    "images/informática.png"
+    image("images/informática.png", height: 100%)
   } else if opts.unidad-academica == "ingeniería" {
-    "images/ingeniería.png"
+    image("images/ingeniería.png", height: 100%)
   } else {
     opts.unidad-academica
   }
@@ -153,11 +157,14 @@
   align(center)[
     #set par(spacing: 0pt)
     #v(-margen-top + 0.5cm)
-    #stack(
-      dir: ltr,
-      spacing: 1fr,
-      image(unidad-academica-logo, height: 1.4cm),
-      image(institucion-logo, height: 1.4cm),
+    #block(
+      height: 1.4cm,
+      stack(
+        dir: ltr,
+        spacing: 1fr,
+        align(horizon, unidad-academica-logo),
+        align(horizon, institucion-logo),
+      ),
     )
     #v(1em)
     #text(size: 14pt, smallcaps(opts.asignatura))
