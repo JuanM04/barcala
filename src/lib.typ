@@ -11,6 +11,8 @@
   formato: (:),
   body,
 ) = {
+  import "@preview/libra:0.1.0": balance
+
   // Validación de los parámetros de entrada
   import "types.typ": parse-options
   let opts = parse-options((
@@ -116,6 +118,9 @@
   set par(
     justify: true,
     linebreaks: "optimized",
+    justification-limits: (
+      tracking: (min: -0.01em, max: 0.02em), // character-level justification
+    ),
     first-line-indent: (amount: 0.75cm, all: true),
   )
 
@@ -173,10 +178,11 @@
       text(size: 12pt, opts.trabajo)
     }
     #v(1.5em)
-    #par(
-      leading: 0.4em,
-      text(weight: "bold", size: 17pt, opts.titulo),
-    )
+    #{
+      set par(justify: false, leading: 0.4em)
+      set text(weight: "bold", size: 17pt)
+      balance(opts.titulo)
+    }
     #v(1.5em)
     #if opts.equipo != none [
       #set text(size: 12pt)

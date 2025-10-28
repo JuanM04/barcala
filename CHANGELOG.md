@@ -11,6 +11,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Se actualizó la versión mínima de Typst a 0.14.0
 - Se renombraron los campos `titulo` y `titulo-descriptivo`
+- _Character-level justification_ por defecto
+- Utilizar [libra](https://typst.app/universe/package/libra) para centrar el título.
 
 ## [0.1.5] - 2025-10-09
 
