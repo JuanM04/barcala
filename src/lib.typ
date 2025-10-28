@@ -2,10 +2,10 @@
   institucion: none,
   unidad-academica: none,
   asignatura: none,
-  titulo: none,
+  trabajo: none,
   equipo: none,
   autores: none,
-  titulo-descriptivo: none,
+  titulo: none,
   resumen: none,
   fecha: datetime.today(),
   formato: (:),
@@ -17,10 +17,10 @@
     institucion: institucion,
     unidad-academica: unidad-academica,
     asignatura: asignatura,
-    titulo: titulo,
+    trabajo: trabajo,
     equipo: equipo,
     autores: autores,
-    titulo-descriptivo: titulo-descriptivo,
+    titulo: titulo,
     resumen: resumen,
     fecha: fecha,
     formato: formato,
@@ -54,7 +54,7 @@
 
   // Propiedades del documento .pdf
   set document(
-    title: opts.titulo-descriptivo,
+    title: opts.titulo,
     author: opts.autores.map(a => a.apellido + ", " + a.nombre),
   )
 
@@ -79,10 +79,10 @@
             dir: ttb,
             spacing: interlineado,
             strong(opts.asignatura),
-            if opts.titulo != none {
-              opts.titulo
+            if opts.trabajo != none {
+              opts.trabajo
             } else {
-              opts.titulo-descriptivo
+              opts.titulo
             },
           ),
           h(1fr),
@@ -168,14 +168,14 @@
     )
     #v(1em)
     #text(size: 14pt, smallcaps(opts.asignatura))
-    #if opts.titulo != none {
+    #if opts.trabajo != none {
       v(1em)
-      text(size: 12pt, opts.titulo)
+      text(size: 12pt, opts.trabajo)
     }
     #v(1.5em)
     #par(
       leading: 0.4em,
-      text(weight: "bold", size: 17pt, opts.titulo-descriptivo),
+      text(weight: "bold", size: 17pt, opts.titulo),
     )
     #v(1.5em)
     #if opts.equipo != none [

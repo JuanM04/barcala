@@ -6,7 +6,7 @@
 #show: informe.with(
   unidad-academica: "ingeniería",
   asignatura: "F0317 Física II",
-  titulo: "Informe de Laboratorio Nº 2",
+  trabajo: "Informe de Laboratorio Nº 2",
   equipo: "Grupo 3",
   autores: (
     (
@@ -27,7 +27,7 @@
     ),
   ),
 
-  titulo-descriptivo: "Circuitos de corriente continua en estado transistorio",
+  titulo: [Circuitos de corriente continua en estado transistorio],
   resumen: [*_Objetivo_ --- determinación de las constantes de tiempo ($tau$) de carga y descarga de un circuito RC. Análisis de la dependencia de $tau$ en función de los valores de resistencia y capacidad que conforman el circuito.*],
 
   fecha: "2025-03-01",

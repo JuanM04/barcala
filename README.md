@@ -34,14 +34,14 @@ Plantilla de informe para estudiantes de la Universidad Nacional de La Plata, es
   - Si se desea usar un logo diferente, se puede pasar un `image("logo.png")` o cualquier otro contenido. Si el logo es muy grande, se puede cambiar su tamaño como `image("logo.png", height: 80%)`.
   - Si la unidad académica de la UNLP no está en la lista, [creá un reporte](https://github.com/JuanM04/barcala/issues/new) con el link al logo y lo agregamos a la plantilla.
 - `asignatura`: el nombre de la asignatura (`str`).
-- `titulo` (`content`, opcional): el título más formal del informe, como `[Trabajo Práctico Nº 3]`.
+- `trabajo` (`content`, opcional): el título más formal del informe, como `[Trabajo Práctico Nº 3]`.
 - `equipo` (`content`): el nombre del equipo, como `[Grupo 12]`.
 - `autores` (`array`): los autores y autoras del proyecto. Cada autor/a tiene
   - `nombre` (`str`): el nombre del autor/a con el formato `Apellido, Nombre`; 
   - `email` (`str`, opcional): un email;
   - `legajo` (`str`, opcional): un legajo;
   - `notas` (`array` o `str`, opcional): otras notas, como `"Autor responsable del informe"`.
-- `titulo-descriptivo` (`str`): el título del proyecto en sí, como `"Análisis de un sistema fluvial"`.
+- `titulo` (`content`): el título del proyecto en sí, como `[Análisis de un sistema fluvial]`.
 - `resumen` (`content`, opcional): un resumen del lo que trata el informe o el objetivo del proyecto. Es un campo libre para escribir con el formato que se desee.
 - `fecha` (`date` o `str`): la fecha de entrega del informe, se puede escribir como `"2023-10-01"` (1 de octubre de 2023).
 - `formato` (`dict`, opcional): otras configuraciones del informe:
