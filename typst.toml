@@ -1,6 +1,6 @@
 [package]
 name = "barcala"
-version = "0.1.5"
+version = "0.2.0"
 compiler = "0.14.0"
 authors = ["Juan Martín Seery <https://github.com/JuanM04>"]
 repository = "https://github.com/JuanM04/barcala"
