@@ -1,6 +1,6 @@
 # barcala
 
-![](https://img.shields.io/badge/Typst-0.13.1-blue?style=flat-square&logo=typst&logoColor=white&labelColor=239DAD&color=555555)
+![](https://img.shields.io/badge/Typst-0.14.0-blue?style=flat-square&logo=typst&logoColor=white&labelColor=239DAD&color=555555)
 
 
 A report template for UNLP students, specially for engineering. Not affiliated with the university.
@@ -105,7 +105,7 @@ y utilizar los siguientes comandos:
 
 ```bash
 # Genera PDF
-typst compile --root . --pdf-standard a-2b template/main.typ
+typst compile --root . --pdf-standard a-2u template/main.typ
 # Genera thumbnail.png
 typst compile --root . --format png template/main.typ "thumbnails/{p}.png"
 oxipng -o 2 --strip safe thumbnails/*.png

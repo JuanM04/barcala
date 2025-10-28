@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Se actualizó la versión mínima de Typst a 0.14.0
+
 ## [0.1.5] - 2025-10-09
 
 ### Changed
