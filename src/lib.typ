@@ -74,7 +74,7 @@
     header: context {
       // Header en todas las páginas menos la primera
       if (counter(page).get().at(0) != 1) {
-        set text(size: 10pt)
+        set text(size: 9pt)
         stack(
           dir: ltr,
           stack(
@@ -107,7 +107,7 @@
     },
     footer: context {
       // Footer en todas las páginas
-      set text(size: 10pt)
+      set text(size: 9pt)
       set align(center)
       counter(page).display("1 / 1", both: true)
     },
@@ -121,7 +121,9 @@
     justification-limits: (
       tracking: (min: -0.01em, max: 0.02em), // character-level justification
     ),
-    first-line-indent: (amount: 0.75cm, all: true),
+    first-line-indent: (amount: 1em, all: true),
+    spacing: 0.5em,
+    leading: 0.5em,
   )
 
   // Títulos y subtítulos
@@ -136,12 +138,29 @@
   show heading.where(level: 3): set text(size: 11pt, weight: "bold")
 
   // Figuras
+  show figure: set block(spacing: 16pt)
+  show figure: set place(clearance: 16pt)
   set figure(numbering: "1", supplement: [Figura])
   show figure.where(kind: table): set figure(supplement: [Tabla])
   show figure.where(kind: raw): set figure(supplement: [Código])
-  show figure.caption: set text(size: 10pt)
+  show figure.caption: set text(size: 9pt)
+  set figure.caption(separator: ". ")
+  show figure.where(kind: table): set figure.caption(position: top)
+  show figure.caption: it => block[
+    #let numbering = if it.numbering != none {
+      [~] + context it.counter.display(it.numbering)
+    }
+    *#it.supplement#numbering#it.separator*#it.body
+  ]
+
+  // Listas
+  set enum(numbering: "1)a)i)")
+  set enum(indent: 0.65em, body-indent: 0.65em)
+  set list(indent: 0.65em, body-indent: 0.65em)
 
   // Otros
+  show math.equation: set block(spacing: 0.65em)
+  show footnote: set text(size: 9pt)
   set bibliography(style: "institute-of-electrical-and-electronics-engineers")
 
   // Logos

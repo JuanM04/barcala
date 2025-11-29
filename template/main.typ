@@ -33,6 +33,26 @@
   fecha: "2025-03-01",
 )
 
+// Enlaces de colores
+#show cite: set text(blue)
+#show link: set text(blue)
+#show ref: set text(blue)
+
+// Bloques de matemática con números para citar
+#set math.equation(numbering: "(1)")
+#show ref: it => {
+  if it.element != none and it.element.func() == math.equation {
+    // Sobreescribir las referencias a ecuaciones
+    link(it.element.location(), numbering(
+      it.element.numbering,
+      ..counter(math.equation).at(it.element.location()),
+    ))
+  } else {
+    // Otras referencias quedan igual
+    it
+  }
+}
+
 // Configuración de `zero`
 #import zero: num, zi
 #zero.set-num(

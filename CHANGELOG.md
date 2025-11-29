@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Los headers, footers, epígrafes y notas al pie ahora son más pequeños (9pt).
+- Normalización de párrafos: sangría más pequeña y se eliminó el espacio entre párrafos. Además, se achicó el interlineado.
+- Las figuras ahora tienen un margen respecto a los párrafos de 16pt.
+- Se cambió el formato de los epígrafes y el título de las tablas ahora está en la parte superior.
+- Se normalizó el formato de las listas y ahora utilizan paréntesis en lugar de puntos (`1)`, `a)`, `i)`).
+- Enlaces de color azul, configurado en la plantilla para quitar fácilmente.
+- Citas de ecuaciones tipo IEEE, configurado en la plantilla para quitar fácilmente.
+
 ## [0.2.0] - 2025-10-27
 
 ### Changed
