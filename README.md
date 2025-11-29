@@ -18,7 +18,7 @@ Plantilla de informe para estudiantes de la Universidad Nacional de La Plata, es
 ## Uso
 
 ```typst
-#import "@preview/barcala:0.2.0": informe
+#import "@preview/barcala:0.3.0": informe
 
 #show: informe.with(
   // parámetros del informe
@@ -57,7 +57,7 @@ Plantilla de informe para estudiantes de la Universidad Nacional de La Plata, es
 Para agregar apéndices al informe, se puede usar el comando `apendice` en el lugar empiezan los apéndices. Por ejemplo:
 
 ```typst
-#import "@preview/barcala:0.2.0": informe, apendice
+#import "@preview/barcala:0.3.0": informe, apendice
 
 #show: informe.with(
   // parámetros del informe
@@ -79,7 +79,7 @@ Para agregar apéndices al informe, se puede usar el comando `apendice` en el lu
 Para agregar una tabla de símbolos/nomenclatura al informe, se puede usar el comando `nomenclatura` en el lugar donde empieza la tabla. Por ejemplo:
 
 ```typst
-#import "@preview/barcala:0.2.0": informe, nomenclatura
+#import "@preview/barcala:0.3.0": informe, nomenclatura
 
 #show: informe.with(
   // parámetros del informe
@@ -97,7 +97,7 @@ Para agregar una tabla de símbolos/nomenclatura al informe, se puede usar el co
 Para generar el documento `main.pdf` y la imagen `thumbnails/1.png` de la portada, se debe cambiar
 
 ```diff
--  #import "@preview/barcala:0.2.0": ...
+-  #import "@preview/barcala:0.3.0": ...
 +  #import "../src/lib.typ": ...
 ```
 

@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.3.0] - 2025-11-29
+
 ### Added
 
 - Ejemplo de tabla con `zero` en la plantilla.
@@ -80,7 +82,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Primera versión del template de Typst.
 - Documentación general.
 
-[unreleased]: https://github.com/JuanM04/barcala/compare/v0.2.0...HEAD
+[unreleased]: https://github.com/JuanM04/barcala/compare/v0.3.0...HEAD
+[0.3.0]: https://github.com/JuanM04/barcala/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/JuanM04/barcala/compare/v0.1.5...v0.2.0
 [0.1.5]: https://github.com/JuanM04/barcala/compare/v0.1.4...v0.1.5
 [0.1.4]: https://github.com/JuanM04/barcala/compare/v0.1.3...v0.1.4
