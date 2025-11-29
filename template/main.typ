@@ -1,6 +1,6 @@
 #import "@preview/barcala:0.2.0": apendice, informe, nomenclatura
 #import "@preview/lilaq:0.5.0" as lq // Paquete para gráficos, puede ser omitido
-#import "@preview/physica:0.9.6": * // Paquete para matemática y física, puede ser omitido
+#import "@preview/physica:0.9.7": * // Paquete para matemática y física, puede ser omitido
 #import "@preview/zero:0.5.0" // Paquete para números lindos y unidades de medida, puede ser omitido
 
 #show: informe.with(
@@ -67,9 +67,6 @@
   fraction: "inline",
 )
 
-// Bloques de matemática con números para citar
-#set math.equation(numbering: "(1)")
-
 // Unidades
 #let Vm = zi.declare("V/m")
 
@@ -99,7 +96,7 @@ Estas se pueden citar como @ley-de-ampere. Los números y unidades pueden ser es
 Si corresponde, describa aquí la metodología empleada para desarrollar su trabajo. Recuerde mencionar y detallar dentro del texto principal todas las tablas y figuras incluidas en el documento.
 
 = Resultados
-Utilice esta sección para presentar y analizar sus resultados. Incluya preferentemente gráficos vectoriales para garantizar la calidad de las imágenes. Recuerde mencionar y explicar el contenido de todas las figuras en el cuerpo principal del trabajo.
+Utilice esta sección para presentar y analizar sus resultados. Incluya preferentemente gráficos vectoriales para garantizar la calidad de las imágenes. Recuerde mencionar y explicar el contenido de todas las figuras en el cuerpo principal del trabajo, como @fig-boxplot.
 
 #figure(
   lq.diagram(
@@ -129,7 +126,28 @@ Utilice esta sección para presentar y analizar sus resultados. Incluya preferen
     ),
   ),
   caption: [Boxplot genérico.],
-)
+) <fig-boxplot>
+
+Además, se pueden incluir tablas como @tabla-ejemplo. Se pueden crear tablas muy complejas, se recomienda leer #link("https://typst.app/docs/guides/tables/"). Además, el paquete #link("https://typst.app/universe/package/zero")[`zero`] permite alinear números y unidades dentro de las tablas de forma sencilla.
+
+#figure(caption: [Mediciones realizadas.], {
+  show: zero.format-table(none, auto)
+  table(
+    columns: 2,
+    align: center + horizon,
+    stroke: none,
+    table.hline(),
+    table.header[][Corriente [#zi.mA()]],
+    table.hline(),
+    $I_1$, [27.0+-0.6],
+    $I_2$, [18.7+-0.4],
+    $I_3$, [7.4+-0.2],
+    $I_5$, [22+-1],
+    table.hline(),
+  )
+}) <tabla-ejemplo>
+
+También se puede complementar el trabajo con notas al pié de página.#footnote[#lorem(10)]
 
 = Conclusiones
 Detalle aquí las conclusiones de su trabajo.

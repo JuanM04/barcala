@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Ejemplo de tabla con `zero` en la plantilla.
+
 ### Changed
 
 - Los headers, footers, epígrafes y notas al pie ahora son más pequeños (9pt).
